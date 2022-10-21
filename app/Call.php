@@ -2,12 +2,17 @@
 
 namespace App;
 
-
 class Call
 {
-	
-	function __construct()
+	private $number;
+
+	function __construct($number)
 	{
-		# code...
+        $this->number = $number;
 	}
+
+	public function __invoke()
+    {
+        return true;
+    }
 }
